@@ -91,3 +91,6 @@ h1,
 h2 {
   color: rgb(73, 73, 88);
 }
+button:hover {
+  cursor: pointer;
+}

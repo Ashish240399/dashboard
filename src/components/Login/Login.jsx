@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import logo from "../images/SkyServe_logo.png";
 import demo_logo from "../images/i2.png";
 import form_logo_text from "../images/geo_risk.jpeg";
@@ -6,8 +6,41 @@ import form_logo from "../images/geo_risk_img_2.jpeg";
 import "./Login.css";
 import { TextField } from "@mui/material";
 import Footer from "../Footer/Footer";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { UserContext } from "../../context/UserContext";
 const Login = () => {
+  const navigate = useNavigate();
+  const { user } = useContext(UserContext);
+  const { findUser } = useContext(UserContext);
+  const [loginDetails, setLoginDetails] = useState({
+    email: "",
+    password: "",
+  });
+  const handleChange = (e) => {
+    setLoginDetails({ ...loginDetails, [e.target.name]: e.target.value });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const data = await fetch("http://localhost:8080/users");
+    const res = await data.json();
+    let present = false;
+    for (let i = 0; i < res.length; i++) {
+      if (
+        res[i].email == loginDetails.email &&
+        res[i].password == loginDetails.password
+      ) {
+        present = true;
+        findUser(res[i]);
+        break;
+      }
+    }
+    if (present) {
+      alert("Login successful!");
+      navigate("/");
+    } else {
+      alert("Login failed!");
+    }
+  };
   return (
     <div className="login">
       <div className="login-container">
@@ -33,22 +66,26 @@ const Login = () => {
                 />
               </div>
             </div>
-            <form>
+            <form onSubmit={handleSubmit}>
               <h2>Sign In</h2>
               <p>Fill your email and password to sign in</p>
               <TextField
+                onChange={handleChange}
                 className="form-input"
                 helperText=" "
                 id="demo-helper-text-aligned-no-helper"
                 placeholder="Email"
                 color="warning"
+                name="email"
               />
               <TextField
+                onChange={handleChange}
                 className="form-input"
                 helperText=" "
                 id="demo-helper-text-aligned-no-helper"
                 placeholder="Password"
                 color="warning"
+                name="password"
               />
               <button className="login-btn">Sign In</button>
             </form>

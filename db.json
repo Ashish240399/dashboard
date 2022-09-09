@@ -1,3 +1,12 @@
 {
-  "users": [{}]
+  "users": [
+    {
+      "name": "Ashish kumar mohanty",
+      "email": "ashishkumarmohanty7797@gmail.com",
+      "company_name": "SkyServe",
+      "company_email": "dfu@kwdfk",
+      "password": "Ashish7797",
+      "id": 1
+    }
+  ]
 }

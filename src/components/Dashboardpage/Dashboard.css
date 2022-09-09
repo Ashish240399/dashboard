@@ -1,0 +1,81 @@
+.dashboard-container {
+  display: flex;
+  width: 100%;
+}
+.left {
+  flex: 1.4;
+  background-color: rgb(105, 97, 249);
+  padding: 0px 20px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+.min-left {
+  flex: 0.5;
+  background-color: rgb(105, 97, 249);
+  padding: 0px 20px;
+  height: 100vh;
+  position: sticky;
+  font-size: 12px;
+  top: 0;
+}
+hr {
+  border: 1px solid rgb(253, 252, 252);
+}
+.right {
+  flex: 10;
+}
+.left > div > img,
+.min-left > div > img {
+  width: 100%;
+}
+.left > div {
+  text-align: start;
+  padding: 18px 0px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.min-left > div {
+  text-align: center;
+  padding: 18px 0px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dashboard-nav {
+  height: 70px;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dashboard-nav > div {
+  display: flex;
+  align-items: center;
+}
+.search-input {
+  padding: 10px;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  border: 2px solid rgb(105, 97, 249);
+  font-size: 17px;
+}
+.search-input:focus {
+  outline: none;
+}
+button {
+  border: none;
+  background-color: rgb(105, 97, 249);
+  padding: 8px 10px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  color: white;
+}
