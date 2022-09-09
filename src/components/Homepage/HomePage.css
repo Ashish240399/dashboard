@@ -1,9 +1,4 @@
-.home-page {
-  background-image: url(.././images/backgroundImage.jpg);
-  background-size: cover;
-}
 .home-body {
-  color: white;
   width: 90%;
   margin: auto;
   z-index: 0;

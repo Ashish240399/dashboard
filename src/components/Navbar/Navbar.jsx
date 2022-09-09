@@ -1,6 +1,7 @@
 import { Avatar } from "@mui/material";
 import React from "react";
-import logo from ".././images/skyserveLogo.png";
+import { Link } from "react-router-dom";
+import logo from ".././images/SkyServe_logo.png";
 import BasicMenu from "../MaterialIcons/Menu";
 import "./Navbar.css";
 const Navbar = () => {
@@ -10,8 +11,8 @@ const Navbar = () => {
         <img src={logo} alt="logo" />
       </div>
       <div className="navbar-btn">
-        <p>Login</p>
-        <p>Signup</p>
+        <Link to="/login">Login</Link>
+        <Link to="register">Signup</Link>
         <div
           style={{
             display: "flex",

@@ -1,0 +1,27 @@
+.Footer {
+  display: flex;
+  color: white;
+  background-color: rgb(29, 29, 54);
+  padding: 8%;
+  justify-content: space-evenly;
+}
+.Footer > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+.Footer > div > div {
+  width: 170px;
+  text-align: start;
+  line-height: 30px;
+}
+.small_logo {
+  width: 100px;
+}
+.subheader {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}

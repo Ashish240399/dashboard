@@ -6,7 +6,7 @@
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: black;
+  background-color: rgb(105, 97, 249);
 }
 .image-div {
   flex: 2;
@@ -16,11 +16,10 @@
 }
 .navbar-btn {
   flex: 9;
-  color: white;
   display: flex;
   justify-content: end;
   align-items: center;
   gap: 10%;
   font-size: 22px;
-  color: aquamarine;
+  color: white;
 }
