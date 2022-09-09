@@ -1,0 +1,26 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: black;
+}
+.image-div {
+  flex: 2;
+}
+.image-div > img {
+  width: 100%;
+}
+.navbar-btn {
+  flex: 9;
+  color: white;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 10%;
+  font-size: 22px;
+  color: aquamarine;
+}
