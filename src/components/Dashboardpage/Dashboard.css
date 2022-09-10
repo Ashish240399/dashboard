@@ -32,7 +32,7 @@ hr {
 .left > div {
   text-align: start;
   padding: 18px 0px;
-  color: white;
+  color: rgb(197, 196, 196);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -40,7 +40,7 @@ hr {
 .min-left > div {
   text-align: center;
   padding: 18px 0px;
-  color: white;
+  color: rgb(197, 196, 196);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,4 +78,18 @@ button {
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
   color: white;
+}
+button:hover {
+  background-color: rgb(147, 141, 249);
+}
+.left > .active,
+.min-left > .active {
+  color: white;
+  font-weight: bolder;
+}
+.left > div:hover,
+.min-left > div:hover {
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
 }

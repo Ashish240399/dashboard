@@ -10,33 +10,52 @@ import FolderIcon from "@mui/icons-material/Folder";
 import SearchIcon from "@mui/icons-material/Search";
 import { UserContext } from "../../context/UserContext";
 import BasicMenu from "../MaterialIcons/Menu";
+import { Link, useNavigate } from "react-router-dom";
+import Summary from "./DashboardComponents/Summary";
+import ApiCalls from "./DashboardComponents/ApiCalls";
+import Errors from "./DashboardComponents/Errors";
+import LongestRequests from "./DashboardComponents/LongestRequests";
 const Dashboard = () => {
+  const [show, setShow] = useState("summary");
   const [size, setSize] = useState("left");
   const { user } = useContext(UserContext);
+  const navigate = useNavigate();
   console.log(size);
   return (
     <div className="dashboard-container">
       <div className={size}>
         <div>
-          <img src={logo} alt="logo" />
+          <img onClick={() => navigate("/")} src={logo} alt="logo" />
         </div>
         <hr />
-        <div>
+        <div
+          onClick={() => setShow("summary")}
+          className={`${show == "summary" && "active"}`}
+        >
           <SpeedIcon />
           Summary
         </div>
         <hr />
-        <div>
+        <div
+          onClick={() => setShow("api")}
+          className={`${show == "api" && "active"}`}
+        >
           <SettingsIcon />
           API Calls
         </div>
         <hr />
-        <div>
+        <div
+          onClick={() => setShow("error")}
+          className={`${show == "error" && "active"}`}
+        >
           <ErrorIcon />
           Errors
         </div>
         <hr />
-        <div>
+        <div
+          onClick={() => setShow("folder")}
+          className={`${show == "folder" && "active"}`}
+        >
           <FolderIcon />
           Longest Requests
         </div>
@@ -83,6 +102,15 @@ const Dashboard = () => {
             <BasicMenu />
           </div>
         </div>
+        {show == "summary" ? (
+          <Summary />
+        ) : show == "api" ? (
+          <ApiCalls />
+        ) : show == "error" ? (
+          <Errors />
+        ) : (
+          show == "folder" && <LongestRequests />
+        )}
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
         tenetur ipsum illum dolorem veniam sed repudiandae beatae quae possimus
         consequatur magni velit, incidunt animi, nulla placeat, impedit itaque

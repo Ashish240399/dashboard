@@ -51,7 +51,14 @@ export default function BasicMenu() {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
+        <MenuItem
+          onClick={() => {
+            handleClose();
+            navigate("/user");
+          }}
+        >
+          Profile
+        </MenuItem>
         <MenuItem
           onClick={() => {
             handleClose();
@@ -64,6 +71,7 @@ export default function BasicMenu() {
           onClick={() => {
             handleClose();
             findUser();
+            navigate("/");
           }}
         >
           Logout
