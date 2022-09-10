@@ -12,7 +12,9 @@ const ForgotPassword = () => {
     <div className="login">
       <div className="login-container">
         <div className="header">
-          <img src={logo} alt="Logo" />
+          <Link to="/">
+            <img src={logo} alt="Logo" />
+          </Link>
         </div>
         <div className="body">
           <div className="left-img">
