@@ -1,6 +1,7 @@
 .dashboard-container {
   display: flex;
   width: 100%;
+  height: 100vh;
 }
 .left {
   flex: 1.4;
@@ -9,6 +10,7 @@
   height: 100vh;
   position: sticky;
   top: 0;
+  overflow-y: hidden;
 }
 .min-left {
   flex: 0.5;
@@ -24,6 +26,8 @@ hr {
 }
 .right {
   flex: 10;
+  height:100vh;
+  overflow-y: scroll;
 }
 .left > div > img
  {
