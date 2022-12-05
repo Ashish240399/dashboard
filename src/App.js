@@ -6,8 +6,11 @@ import Register from "./components/Register/Register";
 import ForgotPassword from "./components/Forgotpassword/ForgotPassword";
 import Dashboard from "./components/Dashboardpage/Dashboard";
 import UserProfile from "./components/User/UserProfile";
+import { useContext } from "react";
+import { UserContext } from "./context/UserContext";
 
 function App() {
+  const { user } = useContext(UserContext);
   return (
     <div className="App">
       <Routes>

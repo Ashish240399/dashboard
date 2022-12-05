@@ -36,7 +36,7 @@
   flex: 1.1;
   background-color: white;
   border-radius: 20px;
-  padding: 50px 70px;
+  padding: 5% 16%;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
@@ -64,6 +64,9 @@ form > .form-input {
   padding: 18px 20px;
   font-size: 17px;
   font-weight: 500;
+}
+.login-btn:hover{
+  background-color: rgb(197, 164, 226);
 }
 .orange-text {
   color: rgb(252, 192, 80);

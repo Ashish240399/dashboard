@@ -2,18 +2,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 0.5% 3%;
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: rgb(105, 97, 249);
+  background-color: rgb(29, 155, 240);
   height: 80px;
 }
 .image-div {
   flex: 2;
 }
 .image-div > img {
-  width: 100%;
+  width: 200px;
 }
 .navbar-btn {
   flex: 9;

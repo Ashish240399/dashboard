@@ -4,7 +4,7 @@
 }
 .left {
   flex: 1.4;
-  background-color: rgb(105, 97, 249);
+  background-color: rgb(29,155,240);
   padding: 0px 20px;
   height: 100vh;
   position: sticky;
@@ -12,8 +12,8 @@
 }
 .min-left {
   flex: 0.5;
-  background-color: rgb(105, 97, 249);
-  padding: 0px 20px;
+  background-color: rgb(29,155,240);
+  padding: 0px 10px;
   height: 100vh;
   position: sticky;
   font-size: 12px;
@@ -25,8 +25,8 @@ hr {
 .right {
   flex: 10;
 }
-.left > div > img,
-.min-left > div > img {
+.left > div > img
+ {
   width: 100%;
 }
 .left > div {
@@ -45,9 +45,29 @@ hr {
   flex-direction: column;
   align-items: center;
 }
+.small-logo{
+  width:70%;
+}
+.hr_line{
+  background-color: white;
+  width:100%;
+  height: 1px;
+}
+.left-right{
+  text-align: center;
+  width: 40px;
+  height: 5px;
+  padding: 0px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: rgb(172, 171, 171);
+}
 .dashboard-nav {
   height: 70px;
-  padding: 10px 20px;
+  padding: 10px 20px 10px 20px;
   position: sticky;
   top: 0px;
   background-color: white;
@@ -65,7 +85,7 @@ hr {
   padding: 10px;
   border-bottom-left-radius: 8px;
   border-top-left-radius: 8px;
-  border: 2px solid rgb(105, 97, 249);
+  border: 2px solid rgb(29,155,240);
   font-size: 17px;
 }
 .search-input:focus {
@@ -73,14 +93,18 @@ hr {
 }
 button {
   border: none;
-  background-color: rgb(105, 97, 249);
+  background-color: rgb(29,155,240);
   padding: 8px 10px;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
   color: white;
 }
-button:hover {
-  background-color: rgb(147, 141, 249);
+.selected-body:hover {
+  cursor: pointer;
+}
+.selected-body{
+  width:100%;
+  margin: auto;
 }
 .left > .active,
 .min-left > .active {

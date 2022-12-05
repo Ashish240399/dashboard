@@ -1,7 +1,7 @@
 .Footer {
   display: flex;
   color: white;
-  background-color: rgb(29, 29, 54);
+  background-color: rgb(17, 21, 46);
   padding: 8%;
   justify-content: space-evenly;
 }
